@@ -1,3 +1,11 @@
+  <div><nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" <%= link_to "HOME", restaurants_path  %> style=>
+        <h1>Restaurants 'n' stuff</h1>
+      </a>
+    </div>
+  </nav>
+  </div>
 <div class="container mt-5">
   <%= simple_form_for @restaurant do |f| %>
     <%= f.input :name %>
