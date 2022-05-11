@@ -1,0 +1,21 @@
+<div class="container">
+   <div class="d-flex justify-content-between align-items-center">
+        <div class="card" style="width: 18rem;">
+          <img src="https://loremflickr.com/320/240/food" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= @restaurant.name %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%= @restaurant.category %></h6>      </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%= @restaurant.address %></li>
+            <li class="list-group-item"><%= @restaurant.phone_number %></li>
+            <% @restaurant.reviews.each do |review|  %>
+              <li class="list-group-item"><%= review.content %></li>
+              <% end %>
+          </ul>
+          <div class="card-body">
+            <%= link_to "Leave a review", new_restaurant_review_path(@restaurant)  %>
+            <a href="#" class="card-link">Some Other Shit</a>
+          </div>
+        </div>
+    </div>
+</div>
